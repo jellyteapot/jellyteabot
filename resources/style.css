@@ -6,13 +6,14 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
+  height: 100vh;
+  width: 100vh;
+  margin: 0px;
 }
 
 body {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #DCD9D4;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.5) 50%) fixed;
+  min-height: 100%;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
