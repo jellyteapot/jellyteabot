@@ -1,17 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 html {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fbda61+0,ff5acd+100 */
-  background: #fbda61;
-  /* Old browsers */
   background-size: cover;
   background-repeat: no-repeat;
-  background: -moz-linear-gradient(-45deg, #fbda61 0%, #ff5acd 100%) fixed;
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #fbda61 0%, #ff5acd 100%) fixed;
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #fbda61 0%, #ff5acd 100%) fixed;
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#fbda61", endColorstr="#ff5acd",GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.5) 50%) fixed;
+  background-blend-mode: soft-light, screen;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */
