@@ -100,6 +100,21 @@ h2 {
     90% {font-size: 1.5em;}
     100% {font-size: 1.5em;}
 }
+@-webkit-keyframes slow-breathing-text {
+    0% {font-size: 1.5em;}
+    35% {font-size: 1.85em;}
+    45% {font-size: 1.85em;}
+    90% {font-size: 1.5em;}
+    100% {font-size: 1.5em;}
+}
+
+@-moz-keyframes slow-breathing-text {
+    0% {font-size: 1.5em;}
+    35% {font-size: 1.85em;}
+    45% {font-size: 1.85em;}
+    90% {font-size: 1.5em;}
+    100% {font-size: 1.5em;}
+}
 
 .slow-breathing-text {
     text-align: center;
@@ -108,4 +123,12 @@ h2 {
     animation-name: slow-breathing-text;
     animation-duration: 8s;
     animation-iteration-count: infinite;
+
+    -webkit-animation-name: slow-breathing-text;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: slow-breathing-text;
+    -moz-animation-duration: 8s;
+    -moz-animation-iteration-count: infinite;
 }
