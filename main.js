@@ -2,7 +2,7 @@
 let dateNow = new Date();
 let hNow = dateNow.getHours();
 
-
+/*Adjust background depending on time of day */
 function newDay() {
     document.body.style.backgroundImage = 'linear-gradient(to top, #2b5876 0%, #4e4376 100%)';
 }
