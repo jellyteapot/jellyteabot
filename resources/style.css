@@ -45,21 +45,13 @@ main {
   box-shadow: 0.5rem 0.5rem 2rem rgba(41, 38, 38, 0.5);
 }
 
-.animation-box {
-  margin: 1.5rem auto;
-  display: block;
-  width: 90%;
-  height: 3em;
-  text-align: center;
-}
-
 h1 {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 2.5rem;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1;
   color: #383d39;
 }
 
@@ -68,77 +60,50 @@ h2 {
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
-  font-weight: 600;
-  font-style: italic;
+  font-weight: 700;
   text-transform: uppercase;
-  line-height: 1.3;
+  line-height: 1;
   color: #383d39;
 }
 
-@keyframes slow-breathing-text {
-  0% {
-    font-size: 1.5em;
-  }
-  35% {
-    font-size: 1.85em;
-  }
-  45% {
-    font-size: 1.85em;
-  }
-  90% {
-    font-size: 1.5em;
-  }
-  100% {
-    font-size: 1.5em;
-  }
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
 }
-@-webkit-keyframes slow-breathing-text {
-  0% {
-    font-size: 1.5em;
-  }
-  35% {
-    font-size: 1.85em;
-  }
-  45% {
-    font-size: 1.85em;
-  }
-  90% {
-    font-size: 1.5em;
-  }
-  100% {
-    font-size: 1.5em;
-  }
-}
-@-moz-keyframes slow-breathing-text {
-  0% {
-    font-size: 1.5em;
-  }
-  35% {
-    font-size: 1.85em;
-  }
-  45% {
-    font-size: 1.85em;
-  }
-  90% {
-    font-size: 1.5em;
-  }
-  100% {
-    font-size: 1.5em;
-  }
-}
-.slow-breathing-text {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  animation-name: slow-breathing-text;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  -webkit-animation-name: slow-breathing-text;
-  -webkit-animation-duration: 8s;
+
+.pulsate {
+  -webkit-animation: pulsate 3s ease-out;
   -webkit-animation-iteration-count: infinite;
-  -moz-animation-name: slow-breathing-text;
-  -moz-animation-duration: 8s;
-  -moz-animation-iteration-count: infinite;
+  opacity: 0.4;
+  animation: pulsate 3s ease-out;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+@keyframes pulsate {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
