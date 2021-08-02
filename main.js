@@ -64,4 +64,13 @@ if (hNow >= 0 && hNow <=2) {
     bedTime();
 } else if (hNow >=22 && hNow <24) {
     countingSheep();
-}
+};
+
+const dialogOneDt = document.getElementById('dialog-one-dt');
+const dialogOneTb = document.getElementById('dialog-one-tb');
+const dialogTwoDt = document.getElementById('dialog-two-dt');
+const dialogTwoTb = document.getElementById('dialog-two-tb');
+
+dialogTwoDt.hidden = true;
+dialogTwoTb.hidden = true;
+

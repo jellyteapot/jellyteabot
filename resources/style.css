@@ -36,10 +36,6 @@ main .tablet {
 }
 
 .container {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
   background-color: snow;
   padding: 1.75rem 3rem;
   border-radius: 10px;
@@ -92,7 +88,7 @@ h3 {
   }
 
   main .tablet {
-    display: flex;
+    display: block;
   }
 }
 .container.desktop.look-here {
