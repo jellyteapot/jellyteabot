@@ -7,6 +7,7 @@
 $snow: hsl(0, 100%, 99%);
 $shadow-color: rgba(41, 38, 38, 0.5);
 $forest-green-color: hsl(132, 4%, 23%);
+$burnt-peach: hsl(14, 74%, 55%);
 
 @mixin raleway {
     font-family: "Raleway", sans-serif;
@@ -23,7 +24,6 @@ $forest-green-color: hsl(132, 4%, 23%);
 @mixin space-mono {
     font-family: "Space Mono", 'Courier New', Courier, monospace;
     font-style: normal;
-    font-weight: 400;
 }
 
 html {
@@ -101,6 +101,9 @@ h3 {
     font-style: italic;
 }
 
+.bold {
+    font-weight: 700;
+}
 
 
 @media only screen and (max-width: 780px) and (orientation: portrait), (max-width: 1024px) and (orientation: landscape){
@@ -121,23 +124,11 @@ h3 {
 } //This allows the containers to expand and increase in opacity on the hover.
 
 .pulsate {
-    -webkit-animation: pulsate 3s ease-out;
-    -webkit-animation-iteration-count: infinite; 
     opacity: 0.4;
     animation: pulsate 3s ease-out;
     animation-iteration-count: infinite;
 }
-@-webkit-keyframes pulsate {
-    0% { 
-        opacity: 0.3;
-    }
-    50% { 
-        opacity: 1.0;
-    }
-    100% { 
-        opacity: 0.3;
-    }
-}
+
 @keyframes pulsate {
     0% { 
         opacity: 0.3;
@@ -148,4 +139,58 @@ h3 {
     100% { 
         opacity: 0.3;
     }
+}
+
+.anim-typewriter p {
+    @include space-mono();
+    font-style: normal;
+    white-space: nowrap;
+    margin: 0 auto;
+    overflow: hidden; 
+    line-height: 1.5;
+
+    &:first-child {
+        animation: typewriter 2.2s steps(44, end);
+        animation-fill-mode: forwards;
+    }
+    &:nth-child(2) {
+        opacity: 0;
+        animation: typewriter 2.2s steps(44, end);
+        animation-fill-mode: forwards;
+        animation-delay: 2.5s;
+    }
+    &:nth-child(3) {
+        opacity: 0;
+        animation: typewriter 2.2s steps(44, end);
+        animation-fill-mode: forwards;
+        animation-delay: 5s;
+
+        #type1 {
+            animation-delay: 6s};
+    }
+    &:nth-child(4) {
+        opacity: 0;
+        animation: typewriter 2.2s steps(44, end);
+        animation-fill-mode: forwards;
+        animation-delay: 7.5s;
+    }
+}
+
+@keyframes typewriter {
+    0% {
+        width: 0;}
+    1% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+input[type=text] {
+    margin: 2rem auto 1rem;
+    padding: 1rem 2rem;
+    border: 1px solid $shadow-color;
+    border-radius: 5px;
 }
