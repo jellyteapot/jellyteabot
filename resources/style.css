@@ -40,8 +40,13 @@ main {
   background-color: snow;
   padding: 1.75rem 3rem;
   border-radius: 10px;
-  opacity: 0.6;
   box-shadow: 0.5rem 0.5rem 2rem rgba(41, 38, 38, 0.5);
+}
+.container.desktop {
+  opacity: 0.6;
+}
+.container.tablet {
+  opacity: 0.8;
 }
 
 h1 {
@@ -74,6 +79,28 @@ h3 {
   font-style: italic;
 }
 
+main .tablet {
+  display: none;
+}
+
+@media only screen and (max-width: 780px) and (orientation: portrait) {
+  main .desktop {
+    display: none;
+  }
+
+  main .tablet {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  main .desktop {
+    display: none;
+  }
+
+  main .tablet {
+    display: flex;
+  }
+}
 .container.desktop {
   transition: all 1s;
 }
