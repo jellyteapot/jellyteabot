@@ -44,10 +44,14 @@ main .tablet {
   margin: 1rem auto;
 }
 .container.desktop {
-  cursor: pointer;
   margin: 2rem auto;
 }
 
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 1.25rem 2rem;
+  }
+}
 .input-rows {
   display: flex;
   flex-direction: row;
@@ -93,8 +97,11 @@ h3 {
   font-style: italic;
 }
 
-.bold {
+.question {
   font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding-top: 1.25rem;
 }
 
 @media only screen and (max-width: 780px) and (orientation: portrait), (max-width: 1024px) and (orientation: landscape) {
@@ -109,6 +116,7 @@ h3 {
 .container.desktop.look-here {
   transition: all 1s;
   opacity: 0.6;
+  cursor: pointer;
 }
 .container.desktop.look-here:hover {
   opacity: 0.8;
@@ -214,16 +222,52 @@ input[type=submit] {
   cursor: pointer;
 }
 
+#type1-input {
+  background-color: transparent;
+  visibility: hidden;
+  opacity: 0;
+  animation: appear 3s;
+  animation-delay: 7.25s;
+  animation-fill-mode: forwards;
+}
+
+#dob-please {
+  background-color: transparent;
+  visibility: hidden;
+  opacity: 0;
+  animation: appear 5s;
+  animation-delay: 7.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  0% {
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
+    visibility: visible;
+    opacity: 0.8;
+  }
+}
 footer {
   position: fixed;
-  text-align: right;
-  bottom: 0;
-  right: 0;
+  margin-left: 5%;
+  bottom: 5%;
+  right: 5%;
   background: transparent;
-  display: none;
+  color: snow;
+  opacity: 0.05;
+  transition: opacity 2s;
+  font-style: italic;
 }
 footer:hover {
-  display: block;
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=style.css.map */
