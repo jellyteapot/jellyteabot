@@ -68,12 +68,12 @@ main {
     padding: 1.75rem 3rem;
     border-radius: 10px;
     box-shadow: 0.5rem 0.5rem 2rem $shadow-color;
+    opacity: 0.8;
+    margin: 1rem auto;
 
     &.desktop {
-        opacity: 0.6;
-    }
-    &.tablet {
-        opacity: 0.8;
+        cursor: pointer;
+        margin: 2rem auto;
     }
 }
 
@@ -110,8 +110,9 @@ h3 {
 
 //Animations//
 
-.container.desktop {
+.container.desktop.look-here {
     transition: all 1s;
+    opacity: 0.6;
 
     &:hover {
         opacity: 0.8;
