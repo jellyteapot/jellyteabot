@@ -73,6 +73,19 @@ main {
     }
 }
 
+.input-rows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem 0.75rem 0 0.75rem;
+}
 h1 {
     @include raleway();
     font-size: 2.5rem;
@@ -161,7 +174,7 @@ h3 {
         animation-fill-mode: forwards;
         animation-delay: 5s;
 
-        #type1 {
+        #type1, #type2{
             animation-delay: 6s};
     }
     &:nth-child(4) {
@@ -189,4 +202,31 @@ input[type=text] {
     padding: 1rem 2rem;
     border: 1px solid $shadow-color;
     border-radius: 5px;
+}
+
+input[type=number] {
+    margin: 1rem auto 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid $shadow-color;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    }
+    .placeholder {
+        font-size: 0.8em;
+    }
+}
+
+input[type=submit] {
+    @include raleway();
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: italic;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: $snow;
+    border: 1px solid transparent;
+    color:hsl(132, 4%, 23%);
+    cursor: pointer;
 }
