@@ -100,15 +100,11 @@ main .tablet {
     display: none;
 }
 
-@media only screen and (max-width: 780px) and (orientation: portrait){
+@media only screen and (max-width: 780px) and (orientation: portrait), (max-width: 1024px) and (orientation: landscape){
     main .desktop {display: none;}
     main .tablet {display: flex;}
 }
 
-@media only screen and (max-width: 1024px) and (orientation: landscape){
-    main .desktop {display: none;}
-    main .tablet {display: flex;}
-}
 //Animations//
 
 .container.desktop {
