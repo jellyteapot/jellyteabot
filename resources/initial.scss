@@ -53,7 +53,12 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+    .tablet {
+        display: none;
+    }
 }
+
 .container {
     display: flex;
     flex-flow: column wrap;
@@ -96,9 +101,7 @@ h3 {
     font-style: italic;
 }
 
-main .tablet {
-    display: none;
-}
+
 
 @media only screen and (max-width: 780px) and (orientation: portrait), (max-width: 1024px) and (orientation: landscape){
     main .desktop {display: none;}

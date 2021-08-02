@@ -31,6 +31,9 @@ main {
   justify-content: center;
   align-items: center;
 }
+main .tablet {
+  display: none;
+}
 
 .container {
   display: flex;
@@ -77,10 +80,6 @@ h3 {
   font-size: 1.25rem;
   font-weight: 400;
   font-style: italic;
-}
-
-main .tablet {
-  display: none;
 }
 
 @media only screen and (max-width: 780px) and (orientation: portrait), (max-width: 1024px) and (orientation: landscape) {
