@@ -230,3 +230,14 @@ input[type=submit] {
     color:hsl(132, 4%, 23%);
     cursor: pointer;
 }
+
+footer {
+    position: fixed;
+    text-align: right;
+    bottom: 0;
+    right: 0;
+    background: transparent;
+    display: none;
+
+    &:hover {display: block;}
+}

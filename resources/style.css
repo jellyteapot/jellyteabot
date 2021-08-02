@@ -214,4 +214,16 @@ input[type=submit] {
   cursor: pointer;
 }
 
+footer {
+  position: fixed;
+  text-align: right;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  display: none;
+}
+footer:hover {
+  display: block;
+}
+
 /*# sourceMappingURL=style.css.map */

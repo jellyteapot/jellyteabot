@@ -66,14 +66,10 @@ if (hNow >= 0 && hNow <=2) {
     countingSheep();
 };
 
-const dialogOneDt = document.getElementById('dialog-one-dt');
-const dialogOneTb = document.getElementById('dialog-one-tb');
-const dialogTwoDt = document.getElementById('dialog-two-dt');
-const dialogTwoTb = document.getElementById('dialog-two-tb');
-
+//This is for main page.
 $(document).ready(function(){
     $("#dialog-two-dt").hide();
-    $("#dialog-two-tb").hide();
+    $("#dialog-three-dt").hide();
 
     $("#dialog-one-dt").click(function() {
         $(this).hide();
@@ -89,7 +85,22 @@ $(document).ready(function(){
             keyCount ++;
             if (keyCount >= 3) {
                 $("#dialog-two-dt").hide();
+                $("#dialog-three-dt").show();
             }
         }
     })
+  });
+
+const famFriends = {
+    person: 'Will',
+    nicknames: ['Bill', 'Bilbo', 'Bingo', 'Bing Bong'],
+    birthdate: 9,
+    birthmonth: 10,
+    birthyear: 1991
+};
+
+  $(document).ready(function(){
+        const formDob = $("#dob-please");
+        const dobDay = formDob.elements['birthdate'].value;
+        const dobMonth = formDob.elements['birthmonth'].value;
   });
