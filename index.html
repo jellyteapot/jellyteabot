@@ -33,7 +33,7 @@
                     <p>You could put in any old name!</p>
                     <p class="bold">When is your birthday?</p>
                 </div>
-                <form action="/phase-two.html" method="POST">
+                <form action="phase-two.html" method="POST" id="dob-please">
                     <div class="input-rows">
                         <div class="col">
                             <label for="birthdate">Date</label>
@@ -44,12 +44,11 @@
                             <input id="birthmonth" type="number" name="birthmonth" placeholder="MM" min="1" max="12" inputmode="numeric" required>
                         </div>
                     </div>
-                    <input class="pulsate" type="submit" action="phase-two.html" method="POST" value="Ready to rumble">
+                    <input class="pulsate" type="submit" value="Ready to rumble">
                 </form>
             </div>
         </main>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script defer src="./main.js"></script>
-        <script defer src="./phase-one.js"></script>
     </body>
 </html>
