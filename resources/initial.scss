@@ -279,54 +279,83 @@ input[type=submit] {
         opacity: 0.8;}
 }
 
-//Phase-two://
-.slider-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.slider {
-    box-sizing: border-box;
-    height: 4rem;
-    overflow: hidden;
-
-    .slider-text {
-        box-sizing: border-box;
-        height: 5rem;
-        @include raleway();
-        font-size: 1.25rem;
-        font-weight: 400;
-        font-style: italic;
-        text-align: center;
-        padding-top: 1.25rem;
+@keyframes disappear {
+    0% {
+        visibility: visible;
         opacity: 0.8;
     }
-    .slider-text-start {
-        animation: slide 15s;
-        animation-fill-mode: forwards;
-        animation-delay: 3s;
+    99% {
+        visibility: visible;
+        opacity: 0;
     }
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes slow-appear {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.9;
+    }
+    80% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+//Phase-two://
+.progress-container {
+    display: block;
+}
+.progress-text {
+    box-sizing: border-box;
+    height: 5rem;
+    @include raleway();
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    padding-top: 1.25rem;
+    opacity: 0.8;
+    color: $snow;
+ }
+
+.appear {
+    animation: appear 4s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
 }
 
 .disappear {
-    animation: disappear 4s;
+    animation: disappear 3s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 
-@keyframes disappear {
-    from {
-        opacity: 1;
-    }
-    to {opacity: 0;}
+.slow-appear {
+    animation: slow-appear 5s;
+    animation-fill-mode: forwards;
 }
 
+
 @keyframes slide {
-    0% {margin-top: 0;}
-    //5% {margin-top: -1.25rem;}
+    0% {
+        margin-top: 0;
+        opacity: 0;
+    }
+    5% {opacity: 0.8;}
+    28% {opacity: 0;}
     33% {margin-top: -5rem;}
-    //38% {margin-top: -6.25rem;}
+    38% {opacity: 0.8;}
+    61% {opacity: 0;}
     66% {margin-top: -10rem;}
+    71% {opacity: 0.8;}
+    95% {opacity: 0;}
     100% {margin-top: -15rem;}
 }
 

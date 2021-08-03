@@ -66,27 +66,50 @@ if (hNow >= 0 && hNow <=2) {
     countingSheep();
 };
 
-//This is for main page.
-$(document).ready(function(){
-    $("#dialog-two-dt").hide();
-    $("#dialog-three-dt").hide();
+const progressContainer = $(".progress-container");
+const progressText = $("#progress-text");
+progressTextArr = ['Scanning retinas...', 'Taking fingerprints...', 'Extracting blood sample...', 'Conducting mandatory DBS checks...']
+//let progressTextIndex = 0;
 
-    $("#dialog-one-dt").click(function() {
-        $(this).hide();
-        $("#dialog-two").show();
-    });
-    $("#dialog-one-tb").click(function() {
-        $(this).hide();
-        $("#dialog-two").show();
-    })
-    let keyCount = 0;
-    $("#type1-input").keypress(function(e) {
-        if(e.which >= 97 && e.which <= 122) {
-            keyCount ++;
-            if (keyCount >= 3) {
-                $("#dialog-two").hide();
-                $("#dialog-three").show();
-            }
-        }
-    }) 
-  });
+progressContainer.hide();
+
+function sleep(seconds) {
+    return new Promise(resolve => setTimeout(resolve, seconds*1000));
+}
+
+async function runProgressUpdates() {
+
+    for (let i=0; i < progressTextArr.length; i++) {
+        let index= i;
+        console.log(index);
+        progressText.text(progressTextArr[index]);
+        console.log(progressText.text());
+        progressContainer.fadeIn(2000).delay(2000).fadeOut(2500);
+        await sleep(6.5);
+    };  
+};
+
+const famFriends = (alias, nicknames, day, month, year, relationship) => {
+    return {
+        alias,
+        nicknames,
+        day,
+        month,
+        year,
+        relationship,
+    }
+}
+
+const willJ = famFriends('Will', ['Bill', 'Bilbo', 'Bingo', 'Bing Bong', 'Smelly', 'Sweetie'], 9, 10, 1991, 'boyfriend');
+const jac = famFriends('Jacquelin', ['Mother of Buns'], 23, 8, 1997, 'me');
+const mum = famFriends('Mum', ['Tuti', 'Mummy', 'Oran gila'], 1, 9, 1962, 'parent');
+
+//This is for main page.
+const dobData = new URLSearchParams(window.location.search);
+$(document).ready(function(){
+    const userDay = dobData.get('birthdate');
+    const userMonth = dobData.get('birthmonth');
+    console.log(`User is born on ${userDay}/${userMonth}`);
+
+    runProgressUpdates();
+});

@@ -34,15 +34,15 @@
                     <p>You could put in any old name!</p>
                     <p class="question">When is your birthday?</p>
                 </div>
-                <form action="phase-two.html" method="POST" id="dob-please">
+                <form action="phase-two.html" method="GET" id="dob-please">
                     <div class="input-rows">
                         <div class="col">
                             <label for="birthdate">Date</label>
-                            <input id="birthdate" type="number" name="birthdate" placeholder="DD" min="1" max="31" required inputmode="numeric">
+                            <input type="number" id ="birthdate" name="birthdate" placeholder="DD" min="1" max="31" required inputmode="numeric">
                         </div>
                         <div class="col">
                             <label for="birthmonth">Month</label>
-                            <input id="birthmonth" type="number" name="birthmonth" placeholder="MM" min="1" max="12" inputmode="numeric" required>
+                            <input type="number" id = "birthmonth" name="birthmonth" placeholder="MM" min="1" max="12" inputmode="numeric" required>
                         </div>
                     </div>
                     <input class="pulsate" type="submit" value="Enter">

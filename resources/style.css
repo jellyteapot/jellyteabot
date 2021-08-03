@@ -265,19 +265,38 @@ input[type=submit] {
     opacity: 0.8;
   }
 }
-.slider-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+@keyframes disappear {
+  0% {
+    visibility: visible;
+    opacity: 0.8;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes slow-appear {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.progress-container {
+  display: block;
 }
 
-.slider {
-  box-sizing: border-box;
-  height: 4rem;
-  overflow: hidden;
-}
-.slider .slider-text {
+.progress-text {
   box-sizing: border-box;
   height: 5rem;
   font-family: "Raleway", sans-serif;
@@ -289,35 +308,54 @@ input[type=submit] {
   text-align: center;
   padding-top: 1.25rem;
   opacity: 0.8;
+  color: snow;
 }
-.slider .slider-text-start {
-  animation: slide 15s;
+
+.appear {
+  animation: appear 4s;
   animation-fill-mode: forwards;
-  animation-delay: 3s;
+  animation-delay: 1s;
 }
 
 .disappear {
-  animation: disappear 4s;
+  animation: disappear 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
 }
 
-@keyframes disappear {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+.slow-appear {
+  animation: slow-appear 5s;
+  animation-fill-mode: forwards;
 }
+
 @keyframes slide {
   0% {
     margin-top: 0;
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.8;
+  }
+  28% {
+    opacity: 0;
   }
   33% {
     margin-top: -5rem;
   }
+  38% {
+    opacity: 0.8;
+  }
+  61% {
+    opacity: 0;
+  }
   66% {
     margin-top: -10rem;
+  }
+  71% {
+    opacity: 0.8;
+  }
+  95% {
+    opacity: 0;
   }
   100% {
     margin-top: -15rem;
