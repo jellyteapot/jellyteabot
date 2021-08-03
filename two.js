@@ -110,6 +110,5 @@ $(document).ready(function(){
     const userMonth = dobData.get('birthmonth');
     console.log(`User is born on ${userDay}/${userMonth}`);
 
-    progressContainer.hide();
     runProgressUpdates();
 });
