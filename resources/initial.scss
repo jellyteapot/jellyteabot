@@ -54,7 +54,7 @@ main {
     justify-content: center;
     align-items: center;
 
-    .tablet {
+    .tablet, .mobile {
         display: none;
     }
 }
@@ -72,11 +72,20 @@ main {
     }
 }
 
-@media only screen and (max-width: 480px){
+/*@media only screen and (max-width: 480px){
     .container {
         padding: 1.25rem 2rem;
     }
-}
+    .tablet {
+        display: none;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}*/
 
 h1 {
     @include raleway();
