@@ -115,6 +115,14 @@ h3 {
     font-style: italic;
 }
 
+.bigtext{
+    @include raleway();
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color:hsl(0, 100%, 99%);
+}
+
 .question {
     font-weight: 700;
     font-size: 1.25rem;
