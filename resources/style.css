@@ -302,7 +302,7 @@ input[type=submit] {
   }
 }
 .progress-container {
-  display: block;
+  display: none;
 }
 
 .progress-text {

@@ -71,8 +71,6 @@ const progressText = $("#progress-text");
 progressTextArr = ['Scanning retinas...', 'Taking fingerprints...', 'Extracting blood sample...', 'Conducting mandatory DBS checks...']
 //let progressTextIndex = 0;
 
-progressContainer.hide();
-
 function sleep(seconds) {
     return new Promise(resolve => setTimeout(resolve, seconds*1000));
 }
@@ -84,8 +82,8 @@ async function runProgressUpdates() {
         console.log(index);
         progressText.text(progressTextArr[index]);
         console.log(progressText.text());
-        progressContainer.fadeIn(2000).delay(2000).fadeOut(2500);
-        await sleep(6.5);
+        progressContainer.fadeIn(2000).delay(750).fadeOut(2000);
+        await sleep(5);
     };  
 };
 
@@ -106,10 +104,12 @@ const mum = famFriends('Mum', ['Tuti', 'Mummy', 'Oran gila'], 1, 9, 1962, 'paren
 
 //This is for main page.
 const dobData = new URLSearchParams(window.location.search);
+
 $(document).ready(function(){
     const userDay = dobData.get('birthdate');
     const userMonth = dobData.get('birthmonth');
     console.log(`User is born on ${userDay}/${userMonth}`);
 
+    progressContainer.hide();
     runProgressUpdates();
 });
