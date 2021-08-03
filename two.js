@@ -28,7 +28,7 @@ function dayOver() {
     document.body.style.backgroundImage = 'linear-gradient(to bottom, #ed6ea0 0%, #ec8c69 100%)';
 }
 function eveningGlow() {
-    document.body.style.backgroundImage = 'linear-gradient(to bottom, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%)';
+    document.body.style.backgroundImage = 'linear-gradient(to bottom, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%)';
 }
 function pinkHorizon() {
     document.body.style.backgroundImage = 'linear-gradient(to top, #ec77ab 0%, #7873f5 100%)';
