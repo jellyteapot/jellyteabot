@@ -52,46 +52,6 @@ main .tablet {
     padding: 1.25rem 2rem;
   }
 }
-.input-rows {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-}
-
-.col {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 1rem 0.75rem 0 0.75rem;
-}
-
-.slider-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider {
-  box-sizing: border-box;
-  height: 5rem;
-  overflow: hidden;
-}
-.slider .slider-text {
-  box-sizing: border-box;
-  height: 5rem;
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.25rem;
-  font-weight: 400;
-  font-style: italic;
-  text-align: center;
-  padding-top: 1.25rem;
-}
-
 h1 {
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -222,6 +182,21 @@ h3 {
     width: 100%;
   }
 }
+.input-rows {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem 0.75rem 0 0.75rem;
+}
+
 input[type=text] {
   margin: 2rem auto 1rem;
   padding: 1rem 2rem;
@@ -288,6 +263,50 @@ input[type=submit] {
     background-color: transparent;
     visibility: visible;
     opacity: 0.8;
+  }
+}
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  box-sizing: border-box;
+  height: 4rem;
+  overflow: hidden;
+}
+.slider .slider-text {
+  box-sizing: border-box;
+  height: 5rem;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  padding-top: 1.25rem;
+}
+.slider .slider-text-start {
+  animation: slide 10s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+@keyframes slide {
+  0% {
+    margin-top: 0;
+  }
+  33% {
+    margin-top: -5rem;
+  }
+  66% {
+    margin-top: -10rem;
+  }
+  100% {
+    margin-top: -15rem;
   }
 }
 footer {
