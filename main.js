@@ -89,18 +89,27 @@ $(document).ready(function(){
             }
         }
     })
-  });
 
-const famFriends = {
-    person: 'Will',
-    nicknames: ['Bill', 'Bilbo', 'Bingo', 'Bing Bong'],
-    birthdate: 9,
-    birthmonth: 10,
-    birthyear: 1991
-};
-
-  $(document).ready(function(){
+    if(window.location.href == 'phase-two.html') {
         const formDob = $("#dob-please");
-        const dobDay = formDob.elements['birthdate'].value;
-        const dobMonth = formDob.elements['birthmonth'].value;
+        const dobDay = formDob.elements['#birthdate'];
+        const dobMonth = formDob.elements['#birthmonth'];
+        let dobDayVal = dobDay.value;
+        let dobMonthVal = dobMonth.value;
+    }
   });
+
+
+const famFriends = (alias, nicknames, day, month, year) => {
+    return {
+        alias: alias,
+        nicknames: nicknames,
+        day: day,
+        month: month,
+        year: year,
+    }
+}
+
+const willJ = famFriends('Will', ['Bill', 'Bilbo', 'Bingo', 'Bing Bong', 'Smelly', 'Sweetie'], 9, 10, 1991);
+const jac = famFriends('Jacquelin', ['Mother of Buns'], 23, 8, 1997);
+const mum = famFriends('Mum', ['Tuti', 'Mummy', 'Oran gila'], 1, 9, 1962);
