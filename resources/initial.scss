@@ -137,7 +137,7 @@ h3 {
 } //This allows the containers to expand and increase in opacity on the hover.
 
 .pulsate {
-    opacity: 0.4;
+    opacity: 0.3;
     animation: pulsate 3s ease-out;
     animation-iteration-count: infinite;
 }
@@ -300,12 +300,25 @@ input[type=submit] {
         font-style: italic;
         text-align: center;
         padding-top: 1.25rem;
+        opacity: 0.8;
     }
     .slider-text-start {
-        animation: slide 10s;
+        animation: slide 15s;
         animation-fill-mode: forwards;
         animation-delay: 3s;
     }
+}
+
+.disappear {
+    animation: disappear 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+    to {opacity: 0;}
 }
 
 @keyframes slide {
