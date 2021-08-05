@@ -82,8 +82,8 @@ async function runProgressUpdates() {
         console.log(index);
         progressText.text(progressTextArr[index]);
         console.log(progressText.text());
-        progressContainer.fadeIn(2000).delay(750).fadeOut(2000);
-        await sleep(5);
+        progressContainer.fadeIn(1750).delay(750).fadeOut(1750);
+        await sleep(1.75+1.75+.75);
     };  
 };
 
