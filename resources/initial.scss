@@ -301,35 +301,6 @@ input[type=submit] {
         opacity: 0.8;}
 }
 
-@keyframes disappear {
-    0% {
-        visibility: visible;
-        opacity: 0.8;
-    }
-    99% {
-        visibility: visible;
-        opacity: 0;
-    }
-    100% {
-        visibility: hidden;
-    }
-}
-
-@keyframes slow-appear {
-    0% {
-        opacity: 0;
-    }
-    20% {
-        opacity: 0.9;
-    }
-    80% {
-        opacity: 0.9;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
 //Phase-two://
 .progress-container {
     display: none;
@@ -352,18 +323,6 @@ input[type=submit] {
     animation-fill-mode: forwards;
     animation-delay: 1s;
 }
-
-.disappear {
-    animation: disappear 3s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-}
-
-.slow-appear {
-    animation: slow-appear 5s;
-    animation-fill-mode: forwards;
-}
-
 
 @keyframes slide {
     0% {
